@@ -9,7 +9,7 @@ use \InvalidArgumentException;
  *
  * @author Tayron Miranda <dev@tayron.com.br>
  */
-class Response 
+final class Response 
 {
     /**
      * Armazena uma lista de cabeçalhos
