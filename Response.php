@@ -111,7 +111,7 @@ final class Response
         $key = current(explode(' ', $value));
         $header = array(
             'value' => $value,
-            'replate' => $replace,
+            'replace' => $replace,
             'httpResponseCode' => $httpResponseCode            
         );
 
