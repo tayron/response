@@ -19,6 +19,67 @@ class Response
     private $listHeaders = array();
     
     /**
+     * @var Singleton reference to singleton instance
+     */
+    private static $instance;
+
+    /**
+     * Response::__construct
+     *
+     * Impede com que o objeto seja instanciado
+     */
+    final private function __construct() 
+    {
+        
+    }
+
+    /**
+     * Response::__clone
+     *
+     * Impede que a classe Requisição seja clonada
+     *
+     * @throws Execao Lança execção caso o usuário tente clonar este classe
+     *
+     * @return void
+     */
+    final public function __clone() 
+    {
+        throw new Exception('A classe Request não pode ser clonada.');
+    }
+
+    /**
+     * Response::__wakeup
+     *
+     * Impede que a classe Requisição execute __wakeup
+     *
+     * @throws Execao Lança execção caso o usuário tente executar este método
+     *
+     * @return void
+     */
+    final public function __wakeup() 
+    {
+        throw new Exception('A classe Request não pode executar __wakeup.');
+    }
+
+    /**
+     * Response::getInstance
+     *
+     * Retorna uma instância única de uma classe.
+     *
+     * @staticvar Singleton $instancia A instância única dessa classe.
+     *
+     * @return Singleton A Instância única.
+     */
+    public static function getInstance() 
+    {
+        if (!static::$instance) {
+            static::$instance = new static();
+        }
+
+        return self::$instance;
+    }    
+    
+    /**
      * Response:: setHeader
      *
      * Método que seta cabeçalho de resposta da página
