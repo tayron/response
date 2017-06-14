@@ -44,7 +44,7 @@ final class Response
      */
     final public function __clone() 
     {
-        throw new Exception('A classe Request não pode ser clonada.');
+        throw new Exception('A classe Response não pode ser clonada.');
     }
 
     /**
@@ -58,7 +58,7 @@ final class Response
      */
     final public function __wakeup() 
     {
-        throw new Exception('A classe Request não pode executar __wakeup.');
+        throw new Exception('A classe Response não pode executar __wakeup.');
     }
 
     /**
