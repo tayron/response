@@ -1,0 +1,22 @@
+{
+    "name": "tayron/response",
+    "description": "Classe que trata e gerencia informações de cabeçalho da requisição",
+    "version": "1.0.0",
+    "type": "classe-utilitaria",
+    "homepage": "https://github.com/tayron/response",
+    "authors": [
+        {
+            "name": "Tayron Miranda",
+            "email": "dev@tayron.com.br"
+        }
+    ],    
+    "require": {
+        "php": ">=5.3"       
+    },
+    "autoload": {
+        "psr-4": {
+            "Tayron\\": "\\"
+        }
+    }      
+
+}
